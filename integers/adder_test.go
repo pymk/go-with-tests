@@ -6,12 +6,14 @@ import (
 )
 
 func TestAdder(t *testing.T) {
-	actual := Add(2, 2)
-	expected := 4
+	t.Run("Check 2 + 2", func(t *testing.T) {
+		got := Add(2, 2)
+		expected := 4
 
-	if actual != expected {
-		t.Errorf("Expected '%d' | Actual '%d'", expected, actual)
-	}
+		if got != expected {
+			t.Errorf("expected '%d' | got '%d'", expected, got)
+		}
+	})
 }
 
 func ExampleAdd() {
