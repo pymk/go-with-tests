@@ -1,8 +1,8 @@
 package iteration
 
-func Repeat(character string, amount int) string {
+func Repeat(character string, rep int) string {
 	var repeated string
-	for i := 0; i < amount; i++ {
+	for i := 0; i < rep; i++ {
 		repeated += character
 	}
 	return repeated
